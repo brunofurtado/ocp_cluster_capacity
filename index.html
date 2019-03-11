@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OCP cluster capacity</title>
+    <script type="text/javascript" src="js/clusterCapacity.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload='hideTotal()'>
+   <div id="wrap">
+     <form action="" id="capacity_form" onsubmit="return false;">
+       <div>
+         <div class="cont_order">
+           <fieldset>
+             <legend>Calculate your OCP cluster capacity</legend>
+               <label >Quantity of App Nodes</label>
+							 <input id="qtyAppNode" name="qtyAppNode" type="number" placeholder="Qty App Nodes" class="form-control form-control-sm">
+							 <br/>
+							 <label for="memNodeSize">Node Size</label>
+               <input id="memNodeSize" name="memNodeSize" type="number" placeholder="Memory (Mb)" class="form-control form-control-sm">
+               <input id="cpuNodeSize" name="cpuNodeSize" type="number" placeholder="CPU (millicore)" class="form-control form-control-sm">
+							 <br/>
+							 <label for="memPodSize">Pod Size</label>
+               <input id="memPodSize" name="memPodSize" type="number" placeholder="Memory (Mb)" class="form-control form-control-sm">
+               <input id="cpuPodSize" name="cpuPodSize" type="number" placeholder="CPU (millicore)" class="form-control form-control-sm">
+							 <br/>
+               <div id="cluster_capacity"></div>
+							 <!-- Calculator button -->
+							 <button id="but_calc" onclick="compare()" name="but_calc" class="btn btn-success">Calculate</button>
+               <!-- Clear button -->
+               <button id="but_clear" onclick="clearForm()" name="but_clear" class="btn btn-outline-secondary">Clear</button>
+           </fieldset>
+         </div>
+       </div>  
+     </form>
+	 </div><!--End of wrap-->
+</body>
+</html>
